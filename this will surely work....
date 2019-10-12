@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int rr[3][3];
+	int sum =0;
+	int matrix1[3][3];
+	cout<<"enter the value in the matrix1";
+	for(int i=0;i<3;i++)
+	{
+		for(int j=0;j<3;j++)
+		{
+			cin>>matrix1[i][j];
+		}
+	}
+	
+	int matrix2[3][3];
+	cout<<"enter the value in the matrix2";
+	for(int i=0;i<3;i++)
+	{
+		for(int j=0;j<3;j++)
+		{
+			cin>>matrix2[i][j];
+		}
+	}
+	for(int i=0;i<3;i++)
+	{
+		for(int j=0;j<3;j++)
+		{
+			for(int k=0;k<3;k++)
+			{
+				sum+=matrix1[i][k]*matrix2[k][j];
+				
+			}
+			rr[i][j]=sum;
+			sum=0;
+		}
+	}
+	cout<<"the resultant matrix is :\n";
+	for(int i=0;i<3;i++)
+	{
+		for(int j=0;j<3;j++)
+		{
+			cout<<rr[i][j]<<" ";
+		}
+		cout<<endl;
+	}
+	return 0;
+}
